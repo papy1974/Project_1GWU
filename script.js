@@ -149,7 +149,8 @@ navigator.geolocation.getCurrentPosition(myPosition);
                                 var audioControls = $("<audio controls>");
                                 var source = $("<source>");
                                 source.attr("src", "http://www.xeno-canto.org/sounds/uploaded/WZCOFQXSWJ/XC437780-sitta%20ledanti%20%C3%A0%20djimla%202018%2010%2007%20028.mp3")
-                                audioControls.append(source);  
+                                audioControls.append(source);
+                                description.append(audioControls);  
                                 
 
                                 
@@ -172,7 +173,7 @@ navigator.geolocation.getCurrentPosition(myPosition);
                                 content.append(animalImage);
                                 content.append(description);
                                 description.append(pOne);
-                                description.append(audioControls);
+                                
                 
                                 $("#birdcards").append(card);
                 /*                    var newBtn = $("<div>") //it creates a new button
