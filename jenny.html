@@ -1,5 +1,22 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
+
+</head>
+<body>
+    <div>
+        Bird Info
+    </div>
+    <div class="buttons">
+
+    </div>
+    <script type="text/javascript">
     $(document).ready(function(){
         
         //This is where the site prompts you to "know your location"
@@ -36,42 +53,18 @@
                 birdArray.sort(); //now that the bird array is built, this sorts them
                  
                 birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
-                    var card = $("<div>");
-                    var header = $("<div>");
-                    var content = $("<div>");
-                    var animalImage=$("<img>");
-                    var description= $("<div>");
-                    var pOne =$("<p>")
-                    animalImage.attr("src", "images/Bird-Image.png");
-                    animalImage.addClass("birdImg");
-                    
-                                        
-
-                    header.addClass("ui content center aligned");
-                    header.text(bird);
-
-                    content.addClass("ui content");
-                    description.text("This is a content");
-                                     
-                    
-
-                    card.addClass("ui card");
-                    card.append(header);
-                    card.append(content);
-                    content.append(animalImage);
-                    content.append(description);
-                    description.append(pOne)
-
-                    $("#birdcards").append(card);
-/*                    var newBtn = $("<div>") //it creates a new button
-                    newBtn.addClass("ui card bird"); //it adds the class "bird" to the button
+                    var newBtn = $("<button>") //it creates a new button
+                    newBtn.addClass("bird"); //it adds the class "bird" to the button
                     newBtn.text(bird); //it adds the text of the brd name to the button
-                    $("body").append(newBtn); //it adds the button to the div with the class .buttons
-                    $(".buttons").append($("<p>")); //it adds a break in between the buttons*/
+                    $(".buttons").append(newBtn); //it adds the button to the div with the class .buttons
+                    $(".buttons").append($("<p>")); //it adds a break in between the buttons
                 })
 
             })
         }
 
     } )
-       
+        </script>
+
+</body>
+</html>
