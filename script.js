@@ -49,7 +49,8 @@ navigator.geolocation.getCurrentPosition(myPosition);
                           .then(function(response) {
                               console.log("sound API");
                             console.log(response);
-                            var birdSound = (response.recordings[0].url);
+                            var birdSound = (response.recordings[0].file);
+                            birdSound = "https:" + birdSound;
                             var thisBird = {"name":birdName,
                                             "code":birdCode,
                                             "sciName": sciName,
@@ -71,16 +72,10 @@ navigator.geolocation.getCurrentPosition(myPosition);
                 
             
             }
-
-
-
-
-
-            response.forEach(buildBirdArray); //calls the fundtion to build the bird array
+            response.forEach(buildBirdArray); //calls the function to build the bird array
+           
             
-            // birdArray.sort(); //now that the bird array is built, this sorts them
-
-            function compare(a,b){
+            function compare(a,b){ //this functions sorts the array
                 const birdA = a.name.toUpperCase();
                 const birdB = b.name.toUpperCase();
 
@@ -92,7 +87,11 @@ navigator.geolocation.getCurrentPosition(myPosition);
                 }
                 return comparison;             
             }
-            birdArray.sort(compare);
+            birdArray.sort(compare); //this calls the function to sort the birdArray
+
+            function addBirdCards(arr) {
+
+            }
 
             birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
                 var newBtn = $("<button>") //it creates a new button
