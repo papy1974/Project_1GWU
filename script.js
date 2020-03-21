@@ -146,6 +146,12 @@ navigator.geolocation.getCurrentPosition(myPosition);
                                 var animalImage=$("<img>");
                                 var description= $("<div>");
                                 var pOne =$("<p>")
+                                var audioControls = $("<audio controls>");
+                                var source = $("<source>");
+                                source.attr("src", "http://www.xeno-canto.org/sounds/uploaded/WZCOFQXSWJ/XC437780-sitta%20ledanti%20%C3%A0%20djimla%202018%2010%2007%20028.mp3")
+                                audioControls.append(source);  
+                                
+
                                 
                                 animalImage.attr("src", bird.birdImage);
                                 animalImage.addClass("birdImg");
@@ -166,6 +172,7 @@ navigator.geolocation.getCurrentPosition(myPosition);
                                 content.append(animalImage);
                                 content.append(description);
                                 description.append(pOne);
+                                description.append(audioControls);
                 
                                 $("#birdcards").append(card);
                 /*                    var newBtn = $("<div>") //it creates a new button
