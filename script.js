@@ -42,6 +42,7 @@
                     var animalImage=$("<img>");
                     var description= $("<div>");
                     var pOne =$("<p>")
+                    
                     animalImage.attr("src", "images/Bird-Image.png");
                     animalImage.addClass("birdImg");
                     
@@ -51,8 +52,8 @@
                     header.text(bird);
 
                     content.addClass("ui content");
-                    description.text("This is a content");
-                                     
+                    // description.text("This is a content");
+                    pOne.text("This is a paragraph");                 
                     
 
                     card.addClass("ui card");
@@ -60,7 +61,7 @@
                     card.append(content);
                     content.append(animalImage);
                     content.append(description);
-                    description.append(pOne)
+                    description.append(pOne);
 
                     $("#birdcards").append(card);
 /*                    var newBtn = $("<div>") //it creates a new button
