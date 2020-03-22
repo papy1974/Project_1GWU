@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+    
+     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    
+
+    <title>Test Page</title>
+</head>
+<body>
+    
+    <div class="container">
+      <button class="ui red massive button" id="modalButton1">Click to Begin</button>
+        <div class="ui modal birdModal" id="modalDiv1">
+          <i class="close icon"></i>
+          <div class="header">Which bird do you want to hear?</div>
+          <div class="content">
+            <div class= "actions">
+              <div class="ui input">
+                <input type="text" id="inputBox2" placeholder = "enter bird name here">
+                <button class="ui orange ok button" id="inputButton2">CLICK</button>
+              </div>
+            </div>
+          </div>
+        <div class="ui modal birdModal" id="modalDiv2">
+          <i class="close icon"></i>
+          <div class="header">Allow location?</div>
+            <div class="content">
+              <div class= "actions">
+                <div class="ui input">
+                <input type="text" id="inputBox1" placeholder = "location?">
+                <button class="ui orange ok button">OK</button>
+                <button class="ui black cancel button">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  
+
+
+    
+    <script src="testScript.js"></script>
+    
+</body>
+</html>
