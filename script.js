@@ -64,11 +64,53 @@ $(document).ready(function(){
                         console.log("sound API");
                         console.log(response);
                         for (i=0; i<3; i++ ) {
-                            var birdSound = (response.recordings[0].file);  
+                            var birdSound = (response.recordings[i].file);  
                             thisBird.sounds[i] = "https:" + birdSound;
                         }
                         console.log("Sounds Added");
                         console.log(thisBird);
+                        ////////////////////////
+                        var card = $("<div>");
+                        var header = $("<div>");
+                        var content = $("<div>");
+                        var animalImage=$("<img>");
+                        var description= $("<div>");
+                        var pOne =$("<p>")
+                        var audioControls1 = $("<audio controls>");
+                        var audioControls2 = $("<audio controls>");
+                        var audioControls3 = $("<audio controls>");
+                        var source1 = $("<source>");
+                        var source2 = $("<source>");
+                        var source3 = $("<source>");
+                        ///We have 3 available sounds, but are only using one here
+                        source1.attr("src", thisBird.sounds[0]);
+                        source2.attr("src", thisBird.sounds[1]);
+                        source3.attr("src", thisBird.sounds[2]);
+                        audioControls1.append(source1);
+                        audioControls2.append(source2);
+                        audioControls3.append(source3);
+                        description.append(audioControls1);  
+                        description.append(audioControls2);
+                        description.append(audioControls3);
+                        animalImage.attr("src", thisBird.images[0]);
+                        animalImage.addClass("birdImg");
+                                
+                        header.addClass("ui content center aligned");
+                        header.text(thisBird.name);
+                
+                        content.addClass("ui content");
+                        // description.text("This is a content");
+                        pOne.text("This is a paragraph");                 
+                                
+                        card.addClass("ui card");
+                        card.append(header);
+                        card.append(content);
+                        content.append(animalImage);
+                        content.append(description);
+                        description.append(pOne);
+                                
+                
+                    $("#birdcards").append(card);
                     })
                     /////////DONE GETTING SOUNDS////////////////
                 })
@@ -76,63 +118,63 @@ $(document).ready(function(){
                 birdArray.push(thisBird); //adds the object of the bird name and the bird code as a new item to the end of the array
             }
             response.forEach(buildBirdArray); //calls the fundtion to build the bird array
-            birdArray.sort(); //now that the bird array is built, this sorts them
+            // birdArray.sort(); //now that the bird array is built, this sorts them
 
 
-            function compare(a,b){
-                const birdA = a.name.toUpperCase();
-                const birdB = b.name.toUpperCase();
+            // function compare(a,b){
+            //     const birdA = a.name.toUpperCase();
+            //     const birdB = b.name.toUpperCase();
 
-                let comparison = 0;
-                if(birdA > birdB) {
-                    comparison = 1;
-                } else if (birdA < birdB) {
-                    comparison = -1;
-                }
-                    return comparison;             
-                }
-            birdArray.sort(compare);
+            //     let comparison = 0;
+            //     if(birdA > birdB) {
+            //         comparison = 1;
+            //     } else if (birdA < birdB) {
+            //         comparison = -1;
+            //     }
+            //         return comparison;             
+            //     }
+            // birdArray.sort(compare);
                 
-            birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
+            // birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
                     //////////////BUILD AND DISPLAY THE BIRD CARDS/////////////////////////////
-                    var card = $("<div>");
-                    var header = $("<div>");
-                    var content = $("<div>");
-                    var animalImage=$("<img>");
-                    var description= $("<div>");
-                    var pOne =$("<p>")
-                    var audioControls = $("<audio controls>");
-                    var source1 = $("<source>");
-                    var source2 = $("<source>");
-                    var source3 = $("<source>");
-                    ///We have 3 available sounds, but are only using one here
-                    source1.attr("src", bird.sounds[0]);
-                    source2.attr("src", bird.sounds[1]);
-                    source3.attr("src", bird.sounds[2]);
-                    audioControls.append(source1);
-                    audioControls.append(source2);
-                    audioControls.append(source3);
-                    description.append(audioControls);  
+                    // var card = $("<div>");
+                    // var header = $("<div>");
+                    // var content = $("<div>");
+                    // var animalImage=$("<img>");
+                    // var description= $("<div>");
+                    // var pOne =$("<p>")
+                    // var audioControls = $("<audio controls>");
+                    // var source1 = $("<source>");
+                    // var source2 = $("<source>");
+                    // var source3 = $("<source>");
+                    // ///We have 3 available sounds, but are only using one here
+                    // source1.attr("src", bird.sounds[0]);
+                    // source2.attr("src", bird.sounds[1]);
+                    // source3.attr("src", bird.sounds[2]);
+                    // audioControls.append(source1);
+                    // audioControls.append(source2);
+                    // audioControls.append(source3);
+                    // description.append(audioControls);  
                     
-                    animalImage.attr("src", bird.images[0]);
-                    animalImage.addClass("birdImg");
+                    // animalImage.attr("src", bird.images[0]);
+                    // animalImage.addClass("birdImg");
                                 
-                    header.addClass("ui content center aligned");
-                    header.text(bird.name);
+                    // header.addClass("ui content center aligned");
+                    // header.text(bird.name);
                 
-                    content.addClass("ui content");
-                    // description.text("This is a content");
-                    pOne.text("This is a paragraph");                 
+                    // content.addClass("ui content");
+                    // // description.text("This is a content");
+                    // pOne.text("This is a paragraph");                 
                                 
-                    card.addClass("ui card");
-                    card.append(header);
-                    card.append(content);
-                    content.append(animalImage);
-                    content.append(description);
-                    description.append(pOne);
+                    // card.addClass("ui card");
+                    // card.append(header);
+                    // card.append(content);
+                    // content.append(animalImage);
+                    // content.append(description);
+                    // description.append(pOne);
                                 
                 
-                    $("#birdcards").append(card);
+                    // $("#birdcards").append(card);
                     
                     //////////////ORIGINAL CODE TO BUILD AND DISPLAY BUTTONS IS COMMENTED BELOW/////////////////////////////
                     // var newBtn = $("<button>") //it creates a new button
@@ -141,7 +183,7 @@ $(document).ready(function(){
                     // $(".buttons").append(newBtn); //it adds the button to the div with the class .buttons
                     // $(".buttons").append($("<p>")); //it adds a break in between the buttons
                 })
-            })
+        //     })
         }
 
         
