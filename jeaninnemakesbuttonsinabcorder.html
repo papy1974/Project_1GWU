@@ -47,10 +47,35 @@
                 function buildBirdArray(item,index){ //build an array of the names returned from eBird
                     console.log(item.comName); //just checking that it's grabbing the names that I want
                     console.log(item.speciesCode);
-                    var birdName = item.comName;
-                    var birdCode = item.speciesCode;
+                    var birdName = item.comName; //stores the bird name from eBird, used for labelling the bird cards
+                    var birdCode = item.speciesCode; //stores the species code from eBird, used for looking up pictures
+                    var sciName = item.sciName; //stores the, used for looking up sounds
                     var thisBird = {"name":birdName,
-                                    "code":birdCode}
+                                    "code":birdCode,
+                                    "sciName": sciName,
+                                    "images": [],
+                                    "sounds": []
+                                }
+                    console.log(thisBird);
+                    queryUrl = `https://search.macaulaylibrary.org/catalog.json?searchField=species&q=&taxonCode=${birdCode}&hotspotCode=&regionCode=&customRegionCode=&userId=&_mediaType=on&mediaType=all&species=&region=&hotspot=&customRegion=&mr=M1TO12&bmo=1&emo=12&yr=YALL&by=1900&ey=2020&user=&view=Gallery&sort=upload_date_desc&_req=on&cap=no&subId=&catId=&_spec=on&specId=&collection=&collectionCatalogId=`
+                    $.ajax({
+                        method: 'GET',
+                        url: queryUrl
+                    }).then(response => {
+                        console.log(queryUrl);
+                        console.log("BirdImages");
+                        console.log(response);
+                        var images = [];
+                        for (i=0; i<5; i++){
+                            images[i] = response.results.content[i].previewUrl;
+                        }
+                        thisBird.images = images;
+                        console.log("images added");
+                        console.log(thisBird);
+                    })
+
+
+
                     console.log(thisBird);
                     birdArray.push(thisBird); //adds the object of the bird name and the bird code as a new item to the end of the array
                 }
