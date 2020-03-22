@@ -1,12 +1,30 @@
 $(document).ready(function(){
-
+    
     var birdArray = []; //create an array to store the different bird names
  //This is where the site prompts you to "know your location"
  //We need to figure out how to make this NOT prompt and ask in the page
     navigator.geolocation.getCurrentPosition(showPosition);
-
-    function showPosition(position) {
+    ///Jack's modal button click to Begin
     
+
+
+    
+    function showPosition(position) {
+        var numOfResults;
+        $("#modalButton1").click(function(){
+            $(".birdModal").modal({
+              closable: false,
+            //   allowMultiple: true    
+              }).modal("show");
+              $('#modalButton1')
+                .transition('scale');
+            });
+        $("#inputButton2").click(function(event){
+            event.preventDefault()  
+            
+            numOfResults = $("#inputBox2").val();
+    
+        
     //this uses the position that is passed from getCurrentPosition
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
@@ -16,10 +34,11 @@ $(document).ready(function(){
     //this is my key for eBird
         var key = "h0q6tfu7bqtt";
     //this is the Max number of results eBird will return, need to get it out of a prompt
-        var numOfResults = prompt("How many birds would you like to see?");
+/////////////        var numOfResults = prompt("How many birds would you like to see?");
     //this builds the queryUrl to eBird
         var queryUrl = "https://api.ebird.org/v2/data/obs/geo/recent?lat="+lat+"&lng="+lon+"&maxResults="+numOfResults+"&X-eBirdApiToken:" + key;
         console.log(queryUrl); //just checking that the queryUrl is built the way I expect it
+        
         $.ajax({
             url: queryUrl,
             headers: {"X-eBirdApiToken": "h0q6tfu7bqtt"}, //eBird requires this format
@@ -183,8 +202,8 @@ $(document).ready(function(){
                     // $(".buttons").append(newBtn); //it adds the button to the div with the class .buttons
                     // $(".buttons").append($("<p>")); //it adds a break in between the buttons
                 })
-        //     })
+            })//     })
         }
 
-        
+       
     } )

@@ -1,4 +1,6 @@
 
+
+//this is the red click to begin button
 $("#modalButton1").click(function(){
   $(".birdModal").modal({
     closable: false,
