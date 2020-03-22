@@ -7,6 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
     <style>
         .banner{
         background: url("images/grass.png");
@@ -19,8 +21,27 @@
        } */
 
        .birdImg{
-           width: 100%
+           
+           width: 100%;
+           height: 100%;
+           
        }
+
+       .ui.card,
+       .ui.cards>.card>.content{
+           background-color: lightcoral;
+           font-family: 'Josefin Sans', sans-serif;
+           font-size: 40px;
+           font-weight: bold;
+        }
+
+        .ui.segment {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+        }
+
+        
+
     </style>
      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
@@ -32,11 +53,30 @@
     <!-- <div class="ui inverted segment teal"> -->
     <h1 class="ui inverted segment violet center aligned header">Welcome to Birdtopia!</h1>
 
-    <article class="banner">
+    <article class="banner"> 
     
+    <div class="ui orange inverted segment">
+        <p>We can help you learn about the birds in your area.<br>
+        We'll need to know your location, and you'll need to install the CORS extension to hear the bird sounds </p>
+    </div>
     <div class = "ui three stackable cards" id = "birdcards"></div>
        
-    </article> 
+    <button class="ui red massive button" id="modalButton1">Click to Begin</button>
+    <div class="ui modal birdModal" id="modalDiv1">
+      <i class="close icon"></i>
+      <div class="header">Which bird do you want to hear?</div>
+      <div class="content">
+        <div class= "actions">
+          <div class="ui input">
+            <input type="text" id="inputBox2" placeholder = "enter bird name here">
+            <button class="ui orange ok button" id="inputButton2">CLICK</button>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
     <!-- </div> -->
 </body>
 </html>
+
