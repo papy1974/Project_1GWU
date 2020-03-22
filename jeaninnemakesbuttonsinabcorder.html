@@ -57,6 +57,7 @@
                                     "sounds": []
                                 }
                     console.log(thisBird);
+                    //////////GET PICTURES///////////////////////
                     queryUrl = `https://search.macaulaylibrary.org/catalog.json?searchField=species&q=&taxonCode=${birdCode}&hotspotCode=&regionCode=&customRegionCode=&userId=&_mediaType=on&mediaType=all&species=&region=&hotspot=&customRegion=&mr=M1TO12&bmo=1&emo=12&yr=YALL&by=1900&ey=2020&user=&view=Gallery&sort=upload_date_desc&_req=on&cap=no&subId=&catId=&_spec=on&specId=&collection=&collectionCatalogId=`
                     $.ajax({
                         method: 'GET',
@@ -72,6 +73,28 @@
                         thisBird.images = images;
                         console.log("images added");
                         console.log(thisBird);
+                    /////////DONE GETTING PICTURES/////////////////////
+                    /////////Get SOUNDS////////////////
+                    $.ajax({
+                          url: "https://www.xeno-canto.org/api/2/recordings?query=" + sciName,
+                          method: "GET"
+                        })
+                          .then(function(response) {
+                                console.log("sound API");
+                                console.log(response);
+                                for (i=0; i<3; i++ ) {
+                                    var birdSound = (response.recordings[0].file);  
+                                    thisBird.sounds[i] = "https:" + birdSound;
+                                }
+                                console.log("Sounds Added");
+                                console.log(thisBird);
+                          })
+                                
+                                
+                            
+                    
+                    
+                    /////////DONE GETTING SOUNDS////////////////
                     })
 
 
