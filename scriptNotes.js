@@ -163,41 +163,42 @@
 //                 response.forEach(buildBirdArray); //calls the fundtion to build the bird array
 //                 birdArray.sort(); //now that the bird array is built, this sorts them
                  
-//                 birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
-//                     var card = $("<div>");
-//                     var header = $("<div>");
-//                     var content = $("<div>");
-//                     var animalImage=$("<img>");
-//                     var description= $("<div>");
-//                     var pOne =$("<p>")
+                birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
+                    var card = $("<div>");
+                    var header = $("<div>");
+                    var content = $("<div>");
+                    var animalImage=$("<img>");
+                    var description= $("<div>");
+                    var pOne =$("<p>")
                     
-//                     animalImage.attr("src", "images/Bird-Image.png");
-//                     animalImage.addClass("birdImg");
+                    animalImage.attr("src", "images/Bird-Image.png");
+                    animalImage.addClass("birdImg");
                     
                                         
 
-//                     header.addClass("ui content center aligned");
-//                     header.text(bird);
+                    header.addClass("ui content center aligned");
+                    header.text(bird);
 
-//                     content.addClass("ui content");
-//                     // description.text("This is a content");
-//                     pOne.text("This is a paragraph");                 
+                    content.addClass("ui content");
+                    // description.text("This is a content");
+                    pOne.text("This is a paragraph");                 
                     
 
-//                     card.addClass("ui card");
-//                     card.append(header);
-//                     card.append(content);
-//                     content.append(animalImage);
-//                     content.append(description);
-//                     description.append(pOne);
+                    card.addClass("ui card");
+                    card.append(header);
+                    card.append(content);
+                    content.append(animalImage);
+                    content.append(description);
+                    description.append(pOne);
 
-//                     $("#birdcards").append(card);
-//                     var newBtn = $("<div>") //it creates a new button
-//                     newBtn.addClass("ui card bird"); //it adds the class "bird" to the button
-//                     newBtn.text(bird); //it adds the text of the brd name to the button
-//                     $("body").append(newBtn); //it adds the button to the div with the class .buttons
-//                     $(".buttons").append($("<p>")); //it adds a break in between the buttons
-//                 })
+                    $("#birdcards").append(card);
+
+                    // var newBtn = $("<div>") //it creates a new button
+                    // newBtn.addClass("ui card bird"); //it adds the class "bird" to the button
+                    // newBtn.text(bird); //it adds the text of the brd name to the button
+                    // $("body").append(newBtn); //it adds the button to the div with the class .buttons
+                    // $(".buttons").append($("<p>")); //it adds a break in between the buttons
+                })
 
 //             })
 //         }
@@ -269,42 +270,42 @@
 //                             birdArray.push(thisBird); //adds the object of the bird name and the bird code as a new item to the end of the array
 //                             console.log(birdArray);
 //                             birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
-                                // var card = $("<div>");
-                                // var header = $("<div>");
-                                // var content = $("<div>");
-                                // var animalImage=$("<img>");
-                                // var description= $("<div>");
-                                // var pOne =$("<p>")
-                                // var audioControls = $("<audio controls>");
-                                // var source = $("<source>");
-                                // source.attr("src", "http://www.xeno-canto.org/sounds/uploaded/WZCOFQXSWJ/XC437780-sitta%20ledanti%20%C3%A0%20djimla%202018%2010%2007%20028.mp3")
-                                // audioControls.append(source);
-                                // description.append(audioControls);  
+                                var card = $("<div>");
+                                var header = $("<div>");
+                                var content = $("<div>");
+                                var animalImage=$("<img>");
+                                var description= $("<div>");
+                                var pOne =$("<p>")
+                                var audioControls = $("<audio controls>");
+                                var source = $("<source>");
+                                source.attr("src", "http://www.xeno-canto.org/sounds/uploaded/WZCOFQXSWJ/XC437780-sitta%20ledanti%20%C3%A0%20djimla%202018%2010%2007%20028.mp3")
+                                audioControls.append(source);
+                                description.append(audioControls);  
                                 
 
                                 
-                                // animalImage.attr("src", bird.birdImage);
-                                // animalImage.addClass("birdImg");
+                                animalImage.attr("src", bird.birdImage);
+                                animalImage.addClass("birdImg");
                                 
                                                     
                 
-                                // header.addClass("ui content center aligned");
-                                // header.text(bird.name);
+                                header.addClass("ui content center aligned");
+                                header.text(bird.name);
                 
-                                // content.addClass("ui content");
-                                // // description.text("This is a content");
-                                // pOne.text("This is a paragraph");                 
+                                content.addClass("ui content");
+                                // description.text("This is a content");
+                                pOne.text("This is a paragraph");                 
                                 
                 
-                                // card.addClass("ui card");
-                                // card.append(header);
-                                // card.append(content);
-                                // content.append(animalImage);
-                                // content.append(description);
-                                // description.append(pOne);
+                                card.addClass("ui card");
+                                card.append(header);
+                                card.append(content);
+                                content.append(animalImage);
+                                content.append(description);
+                                description.append(pOne);
                                 
                 
-                                // $("#birdcards").append(card);
+                                $("#birdcards").append(card);
 //                 /*                    var newBtn = $("<div>") //it creates a new button
 //                                 newBtn.addClass("ui card bird"); //it adds the class "bird" to the button
 //                                 newBtn.text(bird); //it adds the text of the brd name to the button
