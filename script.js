@@ -23,6 +23,9 @@ $(document).ready(function(){
             event.preventDefault()  
             
             numOfResults = $("#inputBox2").val();
+            if (numOfResults >25){
+                numOfResults = 25;
+            }
             
         
     //this uses the position that is passed from getCurrentPosition
@@ -137,72 +140,9 @@ $(document).ready(function(){
                 birdArray.push(thisBird); //adds the object of the bird name and the bird code as a new item to the end of the array
             }
             response.forEach(buildBirdArray); //calls the fundtion to build the bird array
-            // birdArray.sort(); //now that the bird array is built, this sorts them
-
-
-            // function compare(a,b){
-            //     const birdA = a.name.toUpperCase();
-            //     const birdB = b.name.toUpperCase();
-
-            //     let comparison = 0;
-            //     if(birdA > birdB) {
-            //         comparison = 1;
-            //     } else if (birdA < birdB) {
-            //         comparison = -1;
-            //     }
-            //         return comparison;             
-            //     }
-            // birdArray.sort(compare);
-                
-            // birdArray.forEach(function(bird){ //this goes through each bird in the birdArray
-                    //////////////BUILD AND DISPLAY THE BIRD CARDS/////////////////////////////
-                    // var card = $("<div>");
-                    // var header = $("<div>");
-                    // var content = $("<div>");
-                    // var animalImage=$("<img>");
-                    // var description= $("<div>");
-                    // var pOne =$("<p>")
-                    // var audioControls = $("<audio controls>");
-                    // var source1 = $("<source>");
-                    // var source2 = $("<source>");
-                    // var source3 = $("<source>");
-                    // ///We have 3 available sounds, but are only using one here
-                    // source1.attr("src", bird.sounds[0]);
-                    // source2.attr("src", bird.sounds[1]);
-                    // source3.attr("src", bird.sounds[2]);
-                    // audioControls.append(source1);
-                    // audioControls.append(source2);
-                    // audioControls.append(source3);
-                    // description.append(audioControls);  
-                    
-                    // animalImage.attr("src", bird.images[0]);
-                    // animalImage.addClass("birdImg");
-                                
-                    // header.addClass("ui content center aligned");
-                    // header.text(bird.name);
-                
-                    // content.addClass("ui content");
-                    // // description.text("This is a content");
-                    // pOne.text("This is a paragraph");                 
-                                
-                    // card.addClass("ui card");
-                    // card.append(header);
-                    // card.append(content);
-                    // content.append(animalImage);
-                    // content.append(description);
-                    // description.append(pOne);
-                                
-                
-                    // $("#birdcards").append(card);
-                    
-                    //////////////ORIGINAL CODE TO BUILD AND DISPLAY BUTTONS IS COMMENTED BELOW/////////////////////////////
-                    // var newBtn = $("<button>") //it creates a new button
-                    // newBtn.addClass("bird"); //it adds the class "bird" to the button
-                    // newBtn.text(bird.name); //it adds the text of the brd name to the button
-                    // $(".buttons").append(newBtn); //it adds the button to the div with the class .buttons
-                    // $(".buttons").append($("<p>")); //it adds a break in between the buttons
+            nd($("<p>")); //it adds a break in between the buttons
                 })
-            })//     })
+            })
         }
 
        
