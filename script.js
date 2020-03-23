@@ -16,14 +16,14 @@ $(document).ready(function(){
               closable: false,
             //   allowMultiple: true    
               }).modal("show");
-              $('#modalButton1')
-                .transition('scale');
+              $("#intro").remove();
+              $('#modalButton1').transition('scale');
             });
         $("#inputButton2").click(function(event){
             event.preventDefault()  
             
             numOfResults = $("#inputBox2").val();
-    
+            
         
     //this uses the position that is passed from getCurrentPosition
         var lat = position.coords.latitude;
@@ -117,16 +117,16 @@ $(document).ready(function(){
                         header.addClass("ui content center aligned");
                         header.text(thisBird.name);
                 
-                        content.addClass("ui content");
+                        content.addClass("ui content center aligned");
                         // description.text("This is a content");
-                        pOne.text("This is a paragraph");                 
+                        // pOne.text("This is a paragraph");                 
                                 
                         card.addClass("ui card");
                         card.append(header);
                         card.append(content);
                         content.append(animalImage);
-                        content.append(description);
                         description.append(pOne);
+                        content.append(description);
                                 
                 
                     $("#birdcards").append(card);
