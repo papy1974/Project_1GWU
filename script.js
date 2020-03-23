@@ -140,7 +140,7 @@ $(document).ready(function(){
                 birdArray.push(thisBird); //adds the object of the bird name and the bird code as a new item to the end of the array
             }
             response.forEach(buildBirdArray); //calls the fundtion to build the bird array
-            nd($("<p>")); //it adds a break in between the buttons
+            
                 })
             })
         }
