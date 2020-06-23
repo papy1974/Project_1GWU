@@ -42,8 +42,13 @@ bird locations
 
 * [Tests](#Tests)
 
+## Languages and Tools used :
+
+HTML, Javascript, Jquery,Semantic ui, API,CSS,Git
+
 ## Installation
- To run the project, user have to install  access control allow in order to hear the bird sound, get the location, and select the birds type. 
+
+To run the project, user have to install  access control allow in order to hear the bird sound, get the location, and select the birds type. 
 
 ## Description 
  
