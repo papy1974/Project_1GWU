@@ -18,7 +18,8 @@ AS an avid bird watcher, I WANT a website to retrieve information about birds SO
 
 # installation.
 
-To run the project, The user has to install access control allow to hear the birds sound, get the location, and select the bird's type.
+TO use the project the following software must be installed on your computer. Git Bash, and visual studio that can be done on a laptop or a mac. Git can be download from the following link: https://git-scm.com/download/win, and here is the link for downloading visual studio: visualstudio.microsoft.com. It's better to use windows 10 while using the project. both Git bash and visual studio will allow the user the have access to the codes that help to build a project.
+Also, The user has to install access control allow to hear the birds sound, get the location, and select the bird's type.
 
 ## Usage
 
