@@ -14,21 +14,21 @@ AS an avid bird watcher, I WANT a website to retrieve information about birds SO
 
 ![project1](https://user-images.githubusercontent.com/58053159/84222959-de5ab100-aaa6-11ea-9ccb-da334d24c8cd.png)
 
-## Installation
+# installation.
 
-To run the project, user have to install  access control allow in order to hear the bird sound, get the location, and select the birds type. 
+To run the project, The user has to install access control allow to hear the birds sound, get the location, and select the bird's type.
 
 ## Usage
 
-Need to install access control allow to run the app. here is the project link : https://jepps2020.github.io/Project_1GWU/. Once the is launched in browser, click begin, next the birds number, the websites will pop up with birds in your location and click on arrrow to here the bird sounds
+Need to install access control allow to run the app. here is the project link: https://jepps2020.github.io/Project_1GWU/. Once the app is launched in the browser, click begin, next click on the bird's number, the websites will pop up with birds in your location and click on the arrow to here the bird sounds
 
 The project demo can be seen in the following link:https://drive.google.com/file/d/1-OhuydFSQz0FUWi2ox4AoIPYrPDQomRD/view
 
 # Environment.
-I give access to other developpers to modified our project if possible. here is the link project: https://jepps2020.github.io/Project_1GWU/. I can be reached by email: papylotomba@yahoo.fr
+I give access to other developers to modified our project if possible. here is the link project: https://jepps2020.github.io/Project_1GWU/. I can be reached by email: papylotomba@yahoo.fr
 
 ## Instructions
-more information about access control allow can be found here : https://www.html5rocks.com/en/tutorials/cors/
+more information about access control allow can be found here: https://www.html5rocks.com/en/tutorials/cors/
 
 ## Contributors
 
