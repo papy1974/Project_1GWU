@@ -1,22 +1,3 @@
-# Project_1GWU
-
-User Story
-
-AS an avid bird watcher 
-I WANT a website to retrieve information about birds
-SO THAT I can identify birds that I encounter.
-
-GIVEN a website provide informaiton about local birds
-WHEN the page loads it asks for my location
-THEN I allow it to know my location
-WHEN I click to begin
-THEN I am prompted to give a number of birds to view
-WHEN when I select more than 25 birds
-THEN the site limits my selection to 25
-WHEN I click "click"
-THEN I am presented information about birds that are near my location
-WHEN the bird information loads
-THEN I am provided the name of the bird, a picture and 3 recordiing of that bird's sounds
 
 * Title
 
@@ -35,27 +16,30 @@ HTML, Javascript, Jquery,Semantic ui, API,CSS,Git
 ## Description 
  
 AS an avid bird watcher, I WANT a website to retrieve information about birds SO THAT I can identify birds that I encounter.
-GIVEN a website provide informaiton about local birds WHEN the page loads it asks for my location THEN I allow it to know my location WHEN I click to begin THEN I am prompted to give a number of birds to view WHEN when I select more than 25 birds THEN the site limits my selection to 25 WHEN I click "click" THEN I am presented information about birds that are near my location WHEN the bird information loads THEN I am provided the name of the bird, a picture and 3 recordiing of that bird's sounds
+GIVEN a website provide informaiton about local birds WHEN the page loads it asks for my location THEN I allow it to know my location WHEN I click to begin THEN I am prompted to give a number of birds to view WHEN when I select more than 25 birds THEN the site limits my selection to 25 WHEN I click "click" THEN I am presented information about birds that are near my location WHEN the bird information loads THEN I am provided the name of the bird, a picture and 3 recordiing of that bird's sounds.
+![project1](https://user-images.githubusercontent.com/58053159/84222959-de5ab100-aaa6-11ea-9ccb-da334d24c8cd.png)
 
 ## Installation
 
 To run the project, user have to install  access control allow in order to hear the bird sound, get the location, and select the birds type. 
 
-
-
-
-## Instructions
-more information about access control allow can be found here : https://www.html5rocks.com/en/tutorials/cors/
-```
-
-```
 ## Usage
 
 Need to install access control allow to run the app. here is the project link : https://jepps2020.github.io/Project_1GWU/. Once the is launched in browser, click begin, next the birds number, the websites will pop up with birds in your location and click on arrrow to here the bird sounds
-![project1](https://user-images.githubusercontent.com/58053159/84222959-de5ab100-aaa6-11ea-9ccb-da334d24c8cd.png)
+
 The project demo can be seen in the following link:https://drive.google.com/file/d/1-OhuydFSQz0FUWi2ox4AoIPYrPDQomRD/view
 
+# Environment.
+I give access to other developpers to modified our project if possible. here is the link project: https://jepps2020.github.io/Project_1GWU/. I can be reached by email: papylotomba@yahoo.fr
 
+## Instructions
+more information about access control allow can be found here : https://www.html5rocks.com/en/tutorials/cors/
+
+## Contributors
+
+Jasmine:https://github.com/JEpps2020,and https://github.com/pjack76
+            
+ <img src="https://avatars3.githubusercontent.com/u/58053159?v=4" alt="drawing" width="150" display="inline"/> papy1974  GitHubLink: https://github.com/papy1974
 
 ## License 
 This project is licensed under the MIT -
@@ -70,17 +54,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 © 2020 GitHub, Inc.
 
 see the www.source.org file for details
-## Contributors
 
-Jasmine:https://github.com/JEpps2020, Jeanine:, and PUTHEARA.
-            
- <img src="https://avatars3.githubusercontent.com/u/58053159?v=4" alt="drawing" width="150" display="inline"/> papy1974  GitHubLink: https://github.com/papy1974
-
-## Tests
-Run the project in chrome to make it faster and working. There is currectnly no tests.
-
-## contributing
-I give access to other developpers to modified our project if possible. here is the link project: https://jepps2020.github.io/Project_1GWU/. I can be reached by email: papylotomba@yahoo.fr
 
 ## Badges
 
